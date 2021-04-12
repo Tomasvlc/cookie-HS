@@ -6,6 +6,32 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <script>
+    function deleteHubspotCookies() {
+        let _hsp = (window._hsp = window._hsp || [])
+        _hsp.push(['revokeCookieConsent'])
+      }
+
+      //deleteAllCookies()
+      if (getCookie('cookieconsent_status') === 'allow') {
+        launchTagsManagement()
+      } else {
+        //deleteAllCookies()
+        stopTagsManagement()
+        deleteHubspotCookies()
+      }
+  </script>
+  <!-- Start of HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src=""
+    ></script>
+    <!-- End of HubSpot Embed Code -->
 </head>
 <body>
   <app-root></app-root>

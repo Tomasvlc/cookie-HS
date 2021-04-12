@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'integrationHS';
+
+  accepetCookie() {
+    console.log('cookies accepted')
+  }
+
+  declineCookie() {
+    console.log('cookies declined')
+  }
 }
